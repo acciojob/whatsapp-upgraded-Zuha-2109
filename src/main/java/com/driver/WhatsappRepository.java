@@ -77,7 +77,14 @@ public class WhatsappRepository {
         List<User> users = groupMemHashMap.get(group.getName());
         boolean userFound = false;
 
-
+        if (users != null) {
+            for (User user : users) {
+                if (user.equals(sender)) {
+                    userFound = true;
+                    break;
+                }
+            }
+        }
 
         if (userFound == false) {
             throw new Exception("You are not allowed to send message");
