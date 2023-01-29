@@ -14,11 +14,11 @@ public class WhatsappService {
         return whatsappRepository.createUser(name, mobile);
     }
 
-    public Group createGroup(List<User> users) throws Exception {
+    public Group createGroup(List<User> users){
         return whatsappRepository.createGroup(users);
     }
 
-    public int createMessage(String content) throws Exception {
+    public int createMessage(String content){
         return whatsappRepository.createMessage(content);
     }
 
